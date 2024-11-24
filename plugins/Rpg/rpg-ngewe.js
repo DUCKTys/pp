@@ -1,7 +1,7 @@
 
 let handler = async (m, { conn }) => {
     let __timers = (new Date - global.db.data.users[m.sender].lastngojek)
-    let _timers = (300000 - __timers)
+    let _timers = (3000000 - __timers)
     let order = global.db.data.users[m.sender].ojekk
     let timers = clockString(_timers) 
 let name = conn.getName(m.sender)
@@ -29,29 +29,27 @@ var zero4 = `${rbrb4}`
 var zero5 = `${rbrb5}`
 
 var dimas = `
-✔️ Mendapatkan pelanggan....
+✔️ berkelana mencari hidayah....
 `
 
 var dimas2 = `
-🥵 Mulai mengocok.....
+menemukan barang langkah.....
 `
 
 var dimas3 = `     
-🥵Ahhhh, Sakitttt!! >////<
- 💦Crotttt.....
+mampir ke toko untuk menjual barang.....
 `
 
 var dimas4 = `
-🥵💦💦Ahhhhhh😫
+anda kelelahan karena berkelana terlalu jauh...
 `
 
 var hsl = `
-*—[ Hasil Ngewe ${name} ]—*
+*—[ Hasil Penjualan ${name} ]—*
  ➕ 💹 Uang = [ ${zero4} ]
  ➕ ✨ Exp = [ ${zero5} ] 
  ➕ 📛 Warn = +1		 
- ➕ 😍 Order Selesai = +1
-➕  📥Total Order Sebelumnya : ${order}
+➕  📥 Pemasukan : ${order}
 ${wm}
 `
 
@@ -88,9 +86,9 @@ setTimeout(() => {
   user.lastngojek = new Date * 1
     } else conn.reply(m.chat, `Sepertinya Anda Sudah Kecapekan Silahkan Istirahat Dulu sekitar\n🕔 *${timers}*`, m)
 }
-handler.help = ['ngewe']
+handler.help = ['berkelana']
 handler.tags = ['rpg']
-handler.command = /^(ngewe|anu)$/i
+handler.command = /^(berkelana)$/i
 handler.register = true
 handler.premium = true
 
